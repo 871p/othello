@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>おせろ</title>
+
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style>
+    .circle {
+      display : block;
+      visibility  : visible;
+      background-color: #000;
+      height  : 80px;
+      width   : 80px;
+      border-radius : 40px;
+      margin : auto;
+      cursor  : pointer;
+      border  : 1px solid #000;
+    }
+
+    .hide {
+      display  : none;
+    }
+
+    .white {
+      background-color : #fff;
+    }
+
+    .black {
+      background-color : #000;
+    }
+
+    table {
+      background-color : green;
+    }
+
+    td {
+      width   : 100px;
+      height  : 100px;
+      vertical-align : middle;
+      text-align  : middle;
+      border  : 1px solid #000;
+    }
+  </style>
+
+  <script>
+    // スクリプトの例
+    var isBlack = false;
+
+    function setPiece(element) {
+      var $elem   = $(element);
+      var $piece  = $elem.find('span');
+      $piece.removeClass('hide');
+
+      if (isBlack) {
+        $piece.removeClass('white');
+        $piece.addClass('black');
+        isBlack = false;
+      } else {
+        $piece.removeClass('black');
+        $piece.addClass('white');
+        isBlack = true;
+      }
+    }
+  </script>
+
+</head>
+<body>
+
+  <div id="main">
+    <table>
+      <tr>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+      </tr>
+      <tr>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+      </tr>
+      <tr>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+      </tr>
+      <tr>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+      </tr>
+      <tr>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+      </tr>
+      <tr>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+      </tr>
+    </table>
+
+
+
+
+    <!-- 何もない素のHTML(各マスに駒を置いて非表示にしているだけのHTML) -->
+    <!--
+    <table>
+      <tr>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+      </tr>
+      <tr>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+      </tr>
+      <tr>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+      </tr>
+      <tr>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+      </tr>
+      <tr>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+      </tr>
+      <tr>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+        <td><span class="circle hide"></span></td>
+      </tr>
+    </table>
+    -->
+
+  </div>
+
+</body>
+</html>
