@@ -49,20 +49,37 @@
     var isBlack = false;
 
     function setPiece(element) {
-      var $elem   = $(element);
-      var $piece  = $elem.find('span');
-      $piece.removeClass('hide');
+        var $elem = $(element);
+        var $piece = $elem.find('span');
+        $piece.removeClass('hide');
 
-      if (isBlack) {
-        $piece.removeClass('white');
-        $piece.addClass('black');
-        isBlack = false;
-      } else {
-        $piece.removeClass('black');
-        $piece.addClass('white');
-        isBlack = true;
-      }
+        if (isBlack) {
+            $piece.removeClass('white');
+            $piece.addClass('black');
+            isBlack = false;
+        } else {
+            $piece.removeClass('black');
+            $piece.addClass('white');
+            isBlack = true;
+        }
+
+
+
+
+      var $p1 = $('#p1');
+      var $p2 = $('#p2');
+      var $p3 = $('#p3');
+
+
+      if($p1.hasClass('white') && $p2.hasClass('black') && $p3.hasClass('white')) {
+          $p2.removeClass('black');
+          $p2.addClass('white');
+      } else if ($p1.hasClass('black') && $p2.hasClass('white') && $p3.hasClass('black')){
+          $p2.removeClass('white');
+          $p2.addClass('black');
+        }
     }
+
   </script>
 
 </head>
@@ -71,52 +88,52 @@
   <div id="main">
     <table>
       <tr>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p1" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p2" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p3" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p4" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p5" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p6" class="circle hide"></span></td>
       </tr>
       <tr>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p7" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p8" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p9" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p10" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p11" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p12" class="circle hide"></span></td>
       </tr>
       <tr>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p13" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p14" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p15" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p16" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p17" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p18" class="circle hide"></span></td>
       </tr>
       <tr>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p19" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p20" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p21" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p22" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p23" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p24" class="circle hide"></span></td>
       </tr>
       <tr>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p25" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p26" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p27" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p28" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p29" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p30" class="circle hide"></span></td>
       </tr>
       <tr>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
-        <td onclick="setPiece(this)"><span class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p31" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p32" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p33" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p34" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p35" class="circle hide"></span></td>
+        <td onclick="setPiece(this)"><span id="p36" class="circle hide"></span></td>
       </tr>
     </table>
 
